@@ -15,15 +15,105 @@ body {
   background-repeat: no-repeat, no-repeat;
   background-position: right 50vw top -60vh, left 50vw top 45vh;
   font-family: 'Kumbh Sans', sans-serif;
-
-  width: 100vw;
-  height: 100vh;
 }
 
 .card {
   width: 35rem;
   height: 37.5rem;
   margin: 25vh auto;
+  border-radius: 1.5rem;
+
   background-color: white;
-  border-radius: 15px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.pattern-card {
+  height: 40%;
+  width: 100%;
+
+  background-image: url(profile-card-component-main/images/bg-pattern-card.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  position: relative;
+
+  border-radius: 1.5rem 1.5rem 0 0;
+}
+
+.pattern-card img {
+  border: 0.5rem solid white;
+  border-radius: 50%;
+  position: absolute;
+  top: 8.8rem;
+  left: 12.2rem;
+}
+
+.profile {
+  height: 60%;
+  width: 100%;
+
+  text-align: center;
+}
+
+.information {
+  padding-top: 7.5rem;
+}
+
+h1.name {
+  font-size: 1.5rem;
+  font-weight: 700;
+
+  color: hsl(229, 23%, 23%);
+
+  padding-bottom: 1.5rem;
+}
+span.age {
+  font-size: 1.5rem;
+  font-weight: 400;
+
+  color: hsl(0, 0%, 59%);
+
+  padding-left: 0.5rem;
+}
+p.city {
+  font-size: 1.5rem;
+  font-weight: 400;
+
+  color: hsl(0, 0%, 59%);
+
+  padding-bottom: 2.5rem;
+
+  border-bottom: 0.1rem solid hsl(0, 0%, 59%);
+}
+
+.stats {
+  display: flex;
+
+  justify-content: space-around;
+
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+
+.stats-item__number {
+  font-size: 1.5rem;
+  font-weight: 700;
+
+  padding-bottom: 0.5rem;
+}
+
+@media only screen and (max-width: 375px) {
+  .card {
+    width: 32.5rem;
+    height: 37.5rem;
+  }
+
+  .pattern-card img {
+    top: 8.8rem;
+    left: 11rem;
+  }
 }
